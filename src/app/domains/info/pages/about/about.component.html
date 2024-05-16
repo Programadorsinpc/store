@@ -1,10 +1,19 @@
-<div class="px-10">
-    <h1 class="text-lg font-bold">About</h1>
-    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eum dolor asperiores quis non officia vel
-        nihil? Quo esse laudantium, dolore ducimus, incidunt assumenda, corrupti magnam natus velit repellat
-        consequatur.</p>
-    <p>Numero de clientes <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0"></app-counter></p>
-    <div>
-        <app-wave-audio audioUrl="assets/audio.mp3"/>
-    </div>
+<div>
+  <h1 class="text-lg font-bold">About</h1>
+  <p class="text-sm">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eum dolor
+    asperiores quis non officia vel nihil? Quo esse laudantium, dolore ducimus,
+    incidunt assumenda, corrupti magnam natus velit repellat consequatur.
+  </p>
+  <p highlight>
+    Numero de clientes
+    <app-counter
+      [duration]="duration()"
+      [message]="message()"
+      *ngIf="duration() > 0"
+    ></app-counter>
+  </p>
+  <div>
+    <app-wave-audio audioUrl="assets/audio.mp3" />
+  </div>
 </div>

@@ -20,7 +20,9 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@shared/*": ["./src/app/domains/shared/*"]
+      "@shared/*": ["./src/app/domains/shared/*"],
+      "@info/*": ["./src/app/domains/info/*"],
+      "@products/*": ["./src/app/domains/products/*"],
     }
   },
   "angularCompilerOptions": {

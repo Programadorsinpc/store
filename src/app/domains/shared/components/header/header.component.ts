@@ -1,21 +1,14 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-  SimpleChanges,
-  inject,
-  input,
-  signal,
-} from '@angular/core';
-import { Product } from '../../model/product.model';
-import { CartProductComponent } from '../cart-product/cart-product.component';
-import { CartService } from '../../services/cart.service';
+import { Component, SimpleChanges, inject, signal } from '@angular/core';
+import { Product } from '@shared/model/product.model';
+import { CartProductComponent } from '@shared/components/cart-product/cart-product.component';
+import { CartService } from '@shared/services/cart.service';
+import { CommonModule } from '@angular/common';
+import { RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CartProductComponent],
+  imports: [CartProductComponent, CommonModule, RouterLinkWithHref, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
@@ -25,7 +18,7 @@ export class HeaderComponent {
   cart = this.cartService.cart;
   total = this.cartService.total;
 
-  @Output() removeFromCart = new EventEmitter();
+  //@Output() removeFromCart = new EventEmitter();
 
   toggleSideMenu() {
     this.hidenSideMenu.update((prevState) => !prevState);
