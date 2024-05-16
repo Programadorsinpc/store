@@ -1,0 +1,28 @@
+<div class="mt-4 max-w-lg rounded overflow-hidden shadow-lg bg-white">
+  <div class="flex">
+    <img
+      class="w-20 h-20 object-cover"
+      [src]="product.images[0]"
+      [alt]="product.title"
+    />
+    <div class="px-6 py-4 flex flex-col justify-between">
+      <div>
+        <div class="font-bold text-xl">{{ product.title }}</div>
+      </div>
+      <div>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+          >{{ product.price }}</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="bg-amber-200 px-6 pt-4 pb-2 flex justify-center">
+    <button
+      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+      (click)="removeFromCartHandler()"
+    >
+      Retirar del carrito
+    </button>
+  </div>
+</div>
